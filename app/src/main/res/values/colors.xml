@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="softHijau">#C3DCA7</color>
+    <color name="HijauStrongDikit">#7EA650</color>
 </resources>

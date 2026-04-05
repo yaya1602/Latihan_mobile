@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">alya_love</string>
+    <string name="nutri">NutriCycle</string>
+    <string name="nutricycle">NutriCycle</string>
+    <string name="nama">Nama</string>
+    <string name="email">Email</string>
+    <string name="dari_sepiring_sehat_menuju_planet_sehat">Dari Sepiring Sehat Menuju Planet Sehat</string>
+    <string name="password">Password</string>
+    <string name="create">Create</string>
 </resources>

@@ -12,19 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Alya_love">
         <activity
+            android:name=".pertemuan_3.ThirdResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".bangun_ruang"
+            android:exported="false" /> <!-- ✅ Activity utama -->
+        <activity
+            android:name=".pertemuan_3.ThirdActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Activity tambahan -->
-        <!-- Activity UTAMA (Launcher) -->
+        </activity>
         <activity
             android:name=".Luas_PersegiPanjang"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
