@@ -16,7 +16,7 @@
             android:exported="false" />
         <activity
             android:name=".bangun_ruang"
-            android:exported="false" /> <!-- ✅ Activity utama -->
+            android:exported="false" />
         <activity
             android:name=".pertemuan_3.ThirdActivity"
             android:exported="true">

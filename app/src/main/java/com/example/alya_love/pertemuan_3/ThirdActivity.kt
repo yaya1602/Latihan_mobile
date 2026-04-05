@@ -48,7 +48,6 @@ class ThirdActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Data berhasil dibuat", Toast.LENGTH_SHORT).show()
 
-                // 🔥 PINDAH ACTIVITY DI SINI (cukup sekali)
                 val intent = Intent(this, ThirdResultActivity::class.java)
                 startActivity(intent)
             }
