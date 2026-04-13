@@ -26,12 +26,20 @@ class bangun_ruang : AppCompatActivity() {
         val hasil = findViewById<TextView>(R.id.hasil)
 
         btn.setOnClickListener {
-            val p = panjang.text.toString().toDouble()
-            val l = lebar.text.toString().toDouble()
-            val t = tinggi.text.toString().toDouble()
+            val pStr = panjang.text.toString()
+            val lStr = lebar.text.toString()
+            val tStr = tinggi.text.toString()
 
-            val volume = p * l * t
-            hasil.text = "Hasil: $volume"
+            if (pStr.isEmpty() || lStr.isEmpty() || tStr.isEmpty()) {
+                hasil.text = "Tidak boleh kosong!"
+            } else {
+                val p = pStr.toDouble()
+                val l = lStr.toDouble()
+                val t = tStr.toDouble()
+
+                val volume = p * l * t
+                hasil.text = "Hasil: $volume"
+            }
         }
     }
 }

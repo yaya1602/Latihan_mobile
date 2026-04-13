@@ -5,17 +5,19 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alya_love.R
 
-class ThirdResultActivity : AppCompatActivity() {
+class CustomActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_third_result)
+        setContentView(R.layout.activity_custom)
 
         val judul = intent.getStringExtra("judul")
         val deskripsi = intent.getStringExtra("deskripsi")
 
-        val txtJudul = findViewById<TextView>(R.id.textView4)
+        val txtTitle = findViewById<TextView>(R.id.txtTitle)
+        val txtDesc = findViewById<TextView>(R.id.txtDesc)
 
-        txtJudul.text = "$judul\n$deskripsi"
+        txtTitle.text = judul
+        txtDesc.text = deskripsi
     }
 }

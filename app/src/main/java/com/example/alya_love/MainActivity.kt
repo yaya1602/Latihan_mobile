@@ -1,20 +1,63 @@
 package com.example.alya_love
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.alya_love.pertemuan_3.CustomActivity
+import com.example.alya_love.pertemuan_3.ThirdActivity
+import com.example.alya_love.pertemuan_3.ThirdResultActivity
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val btnRumus = findViewById<Button>(R.id.btnRumus)
+        val btnCustom1 = findViewById<Button>(R.id.btnCustom1)
+        val btnCustom2 = findViewById<Button>(R.id.btnCustom2)
+        val btnLogout = findViewById<Button>(R.id.btnLogout)
+
+        // Tombol 1 → Bangun Ruang
+        btnRumus.setOnClickListener {
+            val intent = Intent(this, bangun_ruang::class.java)
+            intent.putExtra("judul", "Rumus Bangun Ruang")
+            intent.putExtra("deskripsi", "Menghitung volume bangun ruang")
+            startActivity(intent)
+        }
+
+        // Tombol 2 → Custom 1 (ThirdResultActivity)
+        btnCustom1.setOnClickListener {
+            val intent = Intent(this, ThirdResultActivity::class.java)
+            intent.putExtra("judul", "Custom 1")
+            intent.putExtra("deskripsi", "Halaman gambar buah")
+            startActivity(intent)
+        }
+
+        // Tombol 3 → Custom 2 (CustomActivity)
+        btnCustom2.setOnClickListener {
+            val intent = Intent(this, CustomActivity::class.java)
+            intent.putExtra("judul", "Custom 2")
+            intent.putExtra("deskripsi", "NutriCycle 🌱")
+            startActivity(intent)
+        }
+
+        // Tombol 4 → Logout
+        btnLogout.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Konfirmasi Logout")
+                .setMessage("Apakah ingin logout?")
+                .setPositiveButton("Ya") { _, _ ->
+                    startActivity(Intent(this, ThirdActivity::class.java))
+                    finish()
+                }
+                .setNegativeButton("Tidak") { _, _ ->
+                    Snackbar.make(btnLogout, "Logout dibatalkan", Snackbar.LENGTH_SHORT).show()
+                }
+                .show()
         }
     }
 }

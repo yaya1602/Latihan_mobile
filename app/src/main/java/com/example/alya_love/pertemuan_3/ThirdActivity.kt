@@ -2,14 +2,9 @@ package com.example.alya_love.pertemuan_3
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.alya_love.R
+import com.example.alya_love.MainActivity
 import com.example.alya_love.databinding.ActivityThirdBinding
 
 class ThirdActivity : AppCompatActivity() {
@@ -21,35 +16,16 @@ class ThirdActivity : AppCompatActivity() {
         binding = ActivityThirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        enableEdgeToEdge()
-//        setContentView(R.layout.activity_third)
-//
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-//            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-//            insets
-//        }
-//
-//
-//        val nama = findViewById<EditText>(R.id.editTextText)
-//        val email = findViewById<EditText>(R.id.editTextTextEmailAddress)
-//        val password = findViewById<EditText>(R.id.editTextTextPassword)
-//        val button = findViewById<Button>(R.id.button3)
-
-
         binding.button3.setOnClickListener {
 
-            val inputNama = binding.editTextText.text.toString()
-            val inputEmail = binding.editTextTextEmailAddress.text.toString()
-            val inputPassword = binding.editTextTextPassword.text.toString()
+            val email = binding.editTextTextEmailAddress.text.toString()
+            val password = binding.editTextTextPassword.text.toString()
 
-            if (inputNama.isEmpty() || inputEmail.isEmpty() || inputPassword.isEmpty()) {
-                Toast.makeText(this, "Semua field harus diisi!", Toast.LENGTH_SHORT).show()
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Email dan Password wajib diisi", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Data berhasil dibuat", Toast.LENGTH_SHORT).show()
-
-                val intent = Intent(this, ThirdResultActivity::class.java)
-                startActivity(intent)
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
             }
         }
     }
