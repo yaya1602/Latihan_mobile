@@ -20,11 +20,28 @@
         android:layout_marginBottom="20dp"
         android:text="Pilih menu yang tersedia" />
 
+
+    <TextView
+        android:id="@+id/judul_aplikasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/gravitasone_regular"
+        android:text="Aplikasi sehat" />
+
+    <TextView
+        android:id="@+id/deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/gravitasone_regular"
+        android:text="ini aplikasi punya  Alya" />
+
     <Button
         android:id="@+id/btnRumus"
-        android:text="Rumus Bangun Ruang"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Rumus Bangun Ruang" />
 
     <Button
         android:id="@+id/btnCustom1"

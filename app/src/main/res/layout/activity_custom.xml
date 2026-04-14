@@ -17,11 +17,12 @@
 
     <!-- BUTTON -->
 
+
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="92dp"
         android:text="NutriCycle 🌱"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -34,14 +35,14 @@
         android:id="@+id/txtDesc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="40dp"
         android:padding="16dp"
         android:text="Dari sepiring sehat menuju planet sehat."
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTitle" />
 
@@ -49,12 +50,12 @@
         android:id="@+id/btnStart"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="52dp"
         android:backgroundTint="#7EA650"
         android:text="Mulai"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtDesc" />
 
@@ -62,11 +63,37 @@
         android:id="@+id/imageView12"
         android:layout_width="188dp"
         android:layout_height="216dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="172dp"
         android:src="@drawable/logoku"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/text_halamanUtama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Aplikasi sehat"
+        android:fontFamily="@font/gravitasone_regular"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="ini aplikasi punya  Alya"
+        android:fontFamily="@font/gravitasone_regular"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_halamanUtama" />
 </androidx.constraintlayout.widget.ConstraintLayout>

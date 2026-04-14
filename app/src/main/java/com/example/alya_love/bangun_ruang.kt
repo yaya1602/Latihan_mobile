@@ -8,12 +8,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.alya_love.databinding.ActivityBangunRuangBinding
 
 class bangun_ruang : AppCompatActivity() {
+    private lateinit var binding: ActivityBangunRuangBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_bangun_ruang)
+        binding = ActivityBangunRuangBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -24,6 +27,13 @@ class bangun_ruang : AppCompatActivity() {
         val tinggi = findViewById<EditText>(R.id.tinggi)
         val btn = findViewById<Button>(R.id.btnHitung)
         val hasil = findViewById<TextView>(R.id.hasil)
+
+
+        val judul = intent.getStringExtra("judul")
+        val deskripsi = intent.getStringExtra("deskripsi")
+
+        binding.textHalamanUtama.text = "$judul"
+        binding.textDeskripsi.text = "$deskripsi"
 
         btn.setOnClickListener {
             val pStr = panjang.text.toString()

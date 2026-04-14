@@ -5,16 +5,20 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.alya_love.databinding.ActivityMainBinding
 import com.example.alya_love.pertemuan_3.CustomActivity
 import com.example.alya_love.pertemuan_3.ThirdActivity
 import com.example.alya_love.pertemuan_3.ThirdResultActivity
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val btnRumus = findViewById<Button>(R.id.btnRumus)
         val btnCustom1 = findViewById<Button>(R.id.btnCustom1)
@@ -24,24 +28,24 @@ class MainActivity : AppCompatActivity() {
         // Tombol 1 → Bangun Ruang
         btnRumus.setOnClickListener {
             val intent = Intent(this, bangun_ruang::class.java)
-            intent.putExtra("judul", "Rumus Bangun Ruang")
-            intent.putExtra("deskripsi", "Menghitung volume bangun ruang")
+            intent.putExtra("judul", binding.judulAplikasi.text.toString())
+            intent.putExtra("deskripsi", binding.deskripsi.text.toString())
             startActivity(intent)
         }
 
         // Tombol 2 → Custom 1 (ThirdResultActivity)
         btnCustom1.setOnClickListener {
             val intent = Intent(this, ThirdResultActivity::class.java)
-            intent.putExtra("judul", "Custom 1")
-            intent.putExtra("deskripsi", "Halaman gambar buah")
+            intent.putExtra("judul", binding.judulAplikasi.text.toString())
+            intent.putExtra("deskripsi", binding.deskripsi.text.toString())
             startActivity(intent)
         }
 
         // Tombol 3 → Custom 2 (CustomActivity)
         btnCustom2.setOnClickListener {
             val intent = Intent(this, CustomActivity::class.java)
-            intent.putExtra("judul", "Custom 2")
-            intent.putExtra("deskripsi", "NutriCycle 🌱")
+            intent.putExtra("judul", binding.judulAplikasi.text.toString())
+            intent.putExtra("deskripsi", binding.deskripsi.text.toString())
             startActivity(intent)
         }
 
