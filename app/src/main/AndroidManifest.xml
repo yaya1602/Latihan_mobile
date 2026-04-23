@@ -1,5 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- INTERNET untuk WebView -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -9,26 +13,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Alya_love">
 
-        <!-- HALAMAN LOGIN (PERTAMA KALI DIBUKA) -->
-        <!-- LOGIN (PERTAMA) -->
+        <!-- ✅ SPLASH JADI HALAMAN PERTAMA -->
         <activity
-            android:name=".pertemuan_3.ThirdActivity"
+            android:name=".SplashActivity"
             android:exported="true">
 
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 
         </activity>
 
-        <!-- HALAMAN LAIN -->
-        <activity android:name=".MainActivity" />
-        <activity android:name=".bangun_ruang" />
-        <activity android:name=".Luas_PersegiPanjang" />
+        <!-- LOGIN -->
+        <activity
+            android:name=".pertemuan_3.ThirdActivity"
+            android:exported="false"/>
 
-        <activity android:name=".pertemuan_3.ThirdResultActivity" />
-        <activity android:name=".pertemuan_3.CustomActivity" />
+        <!-- HALAMAN LAIN -->
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".bangun_ruang"/>
+        <activity android:name=".Luas_PersegiPanjang"/>
+        <activity android:name=".pertemuan_3.ThirdResultActivity"/>
+        <activity android:name=".pertemuan_3.CustomActivity"/>
 
     </application>
 
