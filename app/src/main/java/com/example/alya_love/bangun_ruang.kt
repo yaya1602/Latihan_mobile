@@ -12,22 +12,30 @@ import com.example.alya_love.databinding.ActivityBangunRuangBinding
 
 class bangun_ruang : AppCompatActivity() {
     private lateinit var binding: ActivityBangunRuangBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityBangunRuangBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Bangun Ruang"
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         val panjang = findViewById<EditText>(R.id.panjang)
         val lebar = findViewById<EditText>(R.id.lebar)
         val tinggi = findViewById<EditText>(R.id.tinggi)
         val btn = findViewById<Button>(R.id.btnHitung)
         val hasil = findViewById<TextView>(R.id.hasil)
-
 
         val judul = intent.getStringExtra("judul")
         val deskripsi = intent.getStringExtra("deskripsi")
@@ -51,5 +59,11 @@ class bangun_ruang : AppCompatActivity() {
                 hasil.text = "Hasil: $volume"
             }
         }
+    }
+
+    // ✅ WAJIB supaya tombol back jalan
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

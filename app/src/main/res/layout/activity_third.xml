@@ -90,7 +90,7 @@
                 android:layout_height="55dp"
                 android:text="Masuk Sekarang"
                 android:textAllCaps="false"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/btn_gradient"
                 android:backgroundTint="@null"/>
@@ -106,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Registrasi Akun"
-                android:textColor="#D16BFF"
+                android:textColor="#3E5A71"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp"/>
 

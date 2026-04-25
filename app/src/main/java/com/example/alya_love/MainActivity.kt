@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbar)
+
         // 🔹 Tombol Rumus
         binding.btnRumus.setOnClickListener {
             val intent = Intent(this, bangun_ruang::class.java)

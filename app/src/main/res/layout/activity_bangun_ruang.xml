@@ -9,12 +9,25 @@
     android:layout_height="match_parent"
     tools:context=".bangun_ruang">
 
+    <!-- ✅ TOOLBAR (TAMBAHAN) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#988DB4"
+        android:title="Bangun Ruang"
+        android:titleTextColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ❗ HANYA INI YANG DIUBAH -->
     <EditText
         android:id="@+id/panjang"
         android:hint="Panjang"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

@@ -26,11 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="132dp"
         android:text="Selamat Datang!"
-        android:textColor="#EBEBEB"
+        android:textColor="#273652"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        android:textStyle="italic"
+       android:fontFamily="@font/gravitasone_regular"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -42,19 +42,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59"
+        app:layout_constraintVertical_bias="0.636"
         app:srcCompat="@drawable/gempa3" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="197dp"
-        android:layout_height="242dp"
+        android:layout_width="217dp"
+        android:layout_height="271dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625"
+        app:layout_constraintVertical_bias="0.691"
         app:srcCompat="@drawable/longsor1" />
 
     <ImageView
