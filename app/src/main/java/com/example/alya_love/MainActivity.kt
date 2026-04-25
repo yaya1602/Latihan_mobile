@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         // 🔹 Tombol Start → Buka Website
         binding.btnStart.setOnClickListener {
-            val url = "https://alya-project.alwaysdata.net/dashboard-guest" // 🔥 GANTI dengan link kamu
+            val url = "https://alya-project.alwaysdata.net/dashboard-guest"
 
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)

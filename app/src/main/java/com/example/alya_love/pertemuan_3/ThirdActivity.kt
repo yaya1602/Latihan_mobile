@@ -25,7 +25,7 @@ class ThirdActivity : AppCompatActivity() {
                 Toast.makeText(this, "Email dan Password wajib diisi", Toast.LENGTH_SHORT).show()
             } else {
 
-                // ✅ SIMPAN STATUS LOGIN
+                // SIMPAN STATUS LOGIN
                 val sharedPref = getSharedPreferences("LOGIN", MODE_PRIVATE)
                 val editor = sharedPref.edit()
                 editor.putBoolean("isLogin", true)
