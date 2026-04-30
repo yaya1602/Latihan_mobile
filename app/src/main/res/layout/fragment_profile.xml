@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0F2F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Profile Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp"
+                android:gravity="center">
+
+                <!-- Foto Profil (Placeholder) -->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_person"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="#4CAF50"/>
+
+                <!-- Nama -->
+                <TextView
+                    android:id="@+id/tv_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alya Deka Danisha"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E3A5F"
+                    android:layout_marginTop="16dp"/>
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/tv_profile_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mahasiswa Sistem Informasi - Politeknik Caltex Riau"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Info Mahasiswa -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="NIM"
+                            android:textSize="14sp"
+                            android:textColor="#555555"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=": 2457301011"
+                            android:textSize="14sp"
+                            android:textColor="#1E3A5F"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="Program Studi"
+                            android:textSize="14sp"
+                            android:textColor="#555555"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=": Sistem Informasi"
+                            android:textSize="14sp"
+                            android:textColor="#1E3A5F"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="Angkatan"
+                            android:textSize="14sp"
+                            android:textColor="#555555"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=": 2024"
+                            android:textSize="14sp"
+                            android:textColor="#1E3A5F"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="Role"
+                            android:textSize="14sp"
+                            android:textColor="#555555"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=": Web Developer"
+                            android:textSize="14sp"
+                            android:textColor="#1E3A5F"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Sosial Media -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sosial Media"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E3A5F"
+                    android:layout_marginTop="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/btn_linkedin"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_linkedin"
+                        android:layout_marginHorizontal="8dp"
+                        android:contentDescription="LinkedIn"/>
+
+                    <ImageView
+                        android:id="@+id/btn_github"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_github"
+                        android:layout_marginHorizontal="8dp"
+                        android:contentDescription="GitHub"/>
+
+                    <ImageView
+                        android:id="@+id/btn_instagram"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_instagram"
+                        android:layout_marginHorizontal="8dp"
+                        android:contentDescription="Instagram"/>
+                </LinearLayout>
+
+                <!-- Quote -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&quot;Coding bukan hanya skill, tapi seni untuk menciptakan solusi.&quot;"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:textColor="#4CAF50"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="© 2025 Alya Deka Danisha. All Rights Reserved."
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+</ScrollView>

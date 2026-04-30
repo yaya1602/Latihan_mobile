@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CONTENT -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#A8C9E6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silahkan pilih aktivitas yang anda inginkan!"
+            android:textStyle="italic"
+            android:textColor="#576095"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/judul_aplikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/gravitasone_regular"
+            android:text="Mobileku" />
+
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/gravitasone_regular"
+            android:text="Ini aplikasi punya Alya" />
+
+        <Button
+            android:id="@+id/btnRumus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rumus Bangun Ruang" />
+
+        <Button
+            android:id="@+id/btnCustom1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom 1"/>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#77A1BC"
+            android:text="Web Bina Desa"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
+
+    </LinearLayout>
+
+</LinearLayout>
