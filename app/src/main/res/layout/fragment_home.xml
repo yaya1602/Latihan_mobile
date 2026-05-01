@@ -42,12 +42,16 @@
         <Button
             android:id="@+id/btnRumus"
             android:layout_width="match_parent"
+            android:backgroundTint="#6E90AF"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:text="Rumus Bangun Ruang" />
 
         <Button
             android:id="@+id/btnCustom1"
             android:layout_width="match_parent"
+            android:backgroundTint="#5F8BA9"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:text="Custom 1"/>
 
@@ -63,6 +67,7 @@
         <Button
             android:id="@+id/btnLogout"
             android:layout_width="match_parent"
+            android:backgroundTint="#355675"
             android:layout_height="wrap_content"
             android:text="Logout" />
 

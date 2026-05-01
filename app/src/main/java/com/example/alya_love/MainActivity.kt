@@ -1,80 +1,61 @@
 package com.example.alya_love
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.alya_love.databinding.ActivityMainBinding
-import com.example.alya_love.pertemuan_3.CustomActivity
-import com.example.alya_love.pertemuan_3.ThirdActivity
-import com.example.alya_love.pertemuan_3.ThirdResultActivity
-import com.google.android.material.snackbar.Snackbar
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        // Setup Toolbar
+        setSupportActionBar(findViewById(R.id.toolbar))
 
-        setSupportActionBar(binding.toolbar)
+        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        // 🔹 Tombol Rumus
-        binding.btnRumus.setOnClickListener {
-            val intent = Intent(this, bangun_ruang::class.java)
-            intent.putExtra("judul", binding.judulAplikasi.text.toString())
-            intent.putExtra("deskripsi", binding.deskripsi.text.toString())
-            startActivity(intent)
+        // Load Home Fragment pertama kali + set judul
+        if (savedInstanceState == null) {
+            loadFragment(HomeFragment())
+            updateToolbarTitle("Home")
         }
 
-        // 🔹 Tombol Custom 1
-        binding.btnCustom1.setOnClickListener {
-            val intent = Intent(this, ThirdResultActivity::class.java)
-            intent.putExtra("judul", binding.judulAplikasi.text.toString())
-            intent.putExtra("deskripsi", binding.deskripsi.text.toString())
-            startActivity(intent)
-        }
-
-        // 🔹 Tombol Custom 2
-//        binding.btnStart.setOnClickListener {
-//            val intent = Intent(this, CustomActivity::class.java)
-//            intent.putExtra("judul", binding.judulAplikasi.text.toString())
-//            intent.putExtra("deskripsi", binding.deskripsi.text.toString())
-//            startActivity(intent)
-//        }
-
-        // 🔹 Tombol Start → Buka Website
-        binding.btnStart.setOnClickListener {
-            val url = "https://alya-project.alwaysdata.net/dashboard-guest"
-
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
-            startActivity(intent)
-        }
-
-        // 🔹 Tombol Logout
-        binding.btnLogout.setOnClickListener {
-            AlertDialog.Builder(this)
-                .setTitle("Konfirmasi Logout")
-                .setMessage("Apakah ingin logout?")
-                .setPositiveButton("Ya") { _, _ ->
-
-                    val sharedPref = getSharedPreferences("LOGIN", MODE_PRIVATE)
-                    val editor = sharedPref.edit()
-                    editor.clear()
-                    editor.apply()
-
-                    startActivity(Intent(this, ThirdActivity::class.java))
-                    finish()
+        // Handle navigasi Bottom Navigation
+        bottomNavigation.setOnItemSelectedListener { item ->
+            val fragment = when (item.itemId) {
+                R.id.nav_home -> {
+                    updateToolbarTitle("Home")
+                    HomeFragment()
                 }
-                .setNegativeButton("Tidak") { _, _ ->
-                    Snackbar.make(binding.btnLogout, "Logout dibatalkan", Snackbar.LENGTH_SHORT).show()
+                R.id.nav_about -> {
+                    updateToolbarTitle("About")
+                    AboutFragment()
                 }
-                .show()
+                R.id.nav_profile -> {
+                    updateToolbarTitle("Profile")
+                    ProfileFragment()
+                }
+                else -> {
+                    updateToolbarTitle("Home")
+                    HomeFragment()
+                }
+            }
+            loadFragment(fragment)
+            true
         }
+    }
+
+    // 🔹 Fungsi ganti fragment
+    private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
+    }
+
+    // 🔹 Fungsi ganti judul toolbar ⭐ BARU
+    private fun updateToolbarTitle(title: String) {
+        supportActionBar?.title = title
     }
 }

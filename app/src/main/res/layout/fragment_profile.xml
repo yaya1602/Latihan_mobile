@@ -31,7 +31,7 @@
                     android:id="@+id/profile_image"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:src="@drawable/ic_person"
+                    android:src="@drawable/fotoku"
                     app:civ_border_width="3dp"
                     app:civ_border_color="#4CAF50"/>
 
@@ -154,7 +154,7 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Sosial Media -->
+                <!-- Sosial Media Section -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -170,29 +170,41 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="12dp">
 
+                    <!-- LinkedIn -->
                     <ImageView
                         android:id="@+id/btn_linkedin"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ic_linkedin"
                         android:layout_marginHorizontal="8dp"
-                        android:contentDescription="LinkedIn"/>
+                        android:contentDescription="LinkedIn"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"/>
 
+                    <!-- GitHub -->
                     <ImageView
                         android:id="@+id/btn_github"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ic_github"
                         android:layout_marginHorizontal="8dp"
-                        android:contentDescription="GitHub"/>
+                        android:contentDescription="GitHub"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"/>
 
+                    <!-- Instagram -->
                     <ImageView
                         android:id="@+id/btn_instagram"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ic_instagram"
                         android:layout_marginHorizontal="8dp"
-                        android:contentDescription="Instagram"/>
+                        android:contentDescription="Instagram"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"/>
                 </LinearLayout>
 
                 <!-- Quote -->
